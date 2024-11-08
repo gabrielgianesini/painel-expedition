@@ -2,7 +2,7 @@
 
 import React from "react";
 import { observer } from "mobx-react";
-import filterController from "../../controller/filterController";
+import filterController from "../../../controller/filterController";
 
 const FilterData = observer(() => {
   const { startDate, endDate, setEndDate, setStartDate } = filterController;

@@ -1,10 +1,9 @@
 import React from "react";
-
-import { resultQuery } from "../../mock/query";
-import DataTable from "@/components/dataTable";
-import InfoCardGrid from "@/components/infoCard";
-import LogisticsFilter from "@/components/logisticsFilter";
-import StagePercentages from "@/components/stagePercentages";
+import DataTable from "@/components/body/dataTable";
+import InfoCardGrid from "@/components/header/infoCard";
+import StagePercentages from "@/components/header/stagePercentages";
+import LogisticsFilter from "@/components/header/logisticsFilter";
+import searchDataController from "@/controller/searchData";
 
 export default function Home() {
   return (
@@ -12,7 +11,7 @@ export default function Home() {
       <LogisticsFilter />
       <InfoCardGrid />
       <StagePercentages />
-      <DataTable resultQuery={resultQuery} />
+      <DataTable resultQuery={searchDataController.data} />
     </div>
   );
 }
